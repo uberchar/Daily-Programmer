@@ -6,7 +6,7 @@
 public class Isbn_Checker {
 
 	public static void main(String[] args) {
-		System.out.println(isValidISBN("156881112X"));
+		System.out.println(isValidISBN("0-7475-3269-9"));
 	}
 
 	public static boolean isValidISBN(String ISBN){
@@ -22,11 +22,6 @@ public class Isbn_Checker {
 				multiplier--;
 			}
 		}
-		if (sum%11 == 0) {
-			return true;
-		}
-		else {
-			return false;	
-		}
+		return (sum%11 == 0);
 	}
 }
